@@ -3,10 +3,129 @@
 }
 
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   -webkit-transition: .3s;
   transition: .3s;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  outline: 1px solid white;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 600;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  background: #E25714;
+}
+
+.default div:first-child {
+  height: 100%;
+}
+
+.default_flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.left {
+  width: 33%;
+}
+
+.right {
+  width: 67%;
+}
+
+.right nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right nav div:first-child {
+  margin-right: 30px;
+}
+
+.right nav div:nth-child(2) {
+  overflow: hidden;
+}
+
+.right nav ul {
+  list-style-type: none;
+  margin-left: -300px;
+}
+
+.right nav ul li {
+  display: inline;
+}
+
+.right nav ul li a {
+  font-size: 14px;
+  padding: 10px 30px 10px 0px;
+}
+
+.left, .right {
+  height: 100%;
+  padding: 50px;
+}
+
+.hamburger {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.hamburger svg {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 1.5;
+  cursor: pointer;
+}
+
+.hamburger svg path {
+  fill: none;
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.hamburger #top,
+.hamburger #bottom {
+  stroke-dasharray: 30, 75.39;
+  -webkit-transition: all 0.6s cubic-bezier(0.6, 0.33, 0.67, 1.29);
+  transition: all 0.6s cubic-bezier(0.6, 0.33, 0.67, 1.29);
+}
+
+.hamburger svg.active #top,
+.hamburger svg.active #bottom {
+  stroke-dasharray: 75.39;
+  stroke-dashoffset: -60;
 }

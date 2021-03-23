@@ -1,3 +1,9 @@
+$primary-color: #F2928F;
+$primary-color-2: #f56d69;
+$primary-color-orange: #E25714;
+$primary-color-coffee: #412718;
+
+
 *:focus {
     outline: none;
 }
@@ -6,4 +12,13 @@
 }
 html {
     scroll-behavior: smooth;
+}
+main, section {
+    width: 100%;
+    height: 100%;
+}
+.primary {
+    width: 100%;
+    height: 80%;
+    background: $primary-color-2;
 }
