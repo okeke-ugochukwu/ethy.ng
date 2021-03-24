@@ -77,6 +77,14 @@ section {
   padding-top: 5px;
 }
 
+.right nav div:first-child g #top, .right nav div:first-child g #middle-stroke, .right nav div:first-child g #bottom {
+  stroke: #7e7c7c;
+}
+
+.right nav div:first-child:hover g #top, .right nav div:first-child:hover g #middle-stroke, .right nav div:first-child:hover g #bottom {
+  stroke: #f56d69;
+}
+
 .right nav div:nth-child(2) {
   overflow: hidden;
 }
