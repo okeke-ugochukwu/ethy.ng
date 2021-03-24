@@ -1,7 +1,8 @@
-$primary-color: #F2928F;
+$primary-color: #e2544f;
 $primary-color-2: #f56d69;
 $primary-color-orange: #E25714;
 $primary-color-coffee: #412718;
+$secondary-color: #7e7c7c;
 
 $regular: 14px;
 @mixin flexCenter {
@@ -9,7 +10,14 @@ $regular: 14px;
     justify-content: center;
     align-items: center;
 }
-
+@mixin hover {
+    color: $primary-color-2;
+    transform: .1s;
+    -webkit-transform: .1s;
+    -moz-transform: .1s;
+    -ms-transform: .1s;
+    -o-transform: .1s;
+}
 *:focus {
     outline: none;
 }
@@ -19,11 +27,13 @@ $regular: 14px;
     margin: 0;
     transition: .3s;
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    //outline: 1px solid white;
+   //outline: 1px solid blue;
 }
 html {
     scroll-behavior: smooth;
+
+}
+body {
 }
 a {
     text-decoration: none;
@@ -39,7 +49,6 @@ main {
 section {
     width: 100%;
     height: 100%;
-    background: #E25714;
 }
 .default {
     & div:first-child {
@@ -55,16 +64,24 @@ section {
 }
 .left {
     width: 33%;
+    background: $primary-color-2;
+    
+    a {
+        color: white;
+    }
+
 }
 .right {
     width: 67%;
-    
+
     nav {
         display: flex;
+        position: relative;
         align-items: center;
 
         div:first-child {
-            margin-right: 30px;
+            margin-right: 20px;
+            padding-top: 5px;
         }
         div:nth-child(2) {
             overflow: hidden;
@@ -77,20 +94,50 @@ section {
 
                 a {
                     font-size: $regular;
+                    letter-spacing: 2px;
                     padding: 10px 30px 10px 0px;
+                    font-weight: 600;
+                    color: $secondary-color;
+
+                    &.active {
+                        color: $primary-color-2;
+                    }  
+
+                    &:hover {
+                        @include hover;
+                    }
+
+                    
                 }
+                
             }
         }
 
         //these classes are for nav control
         .prev {
-            margin-left: -300px;
+            margin-left: -380px;
         }
         .full {
             margin-left: 0;
         }
+
+        div:nth-child(3) {
+            position: absolute;
+            right: 0;
+
+            a {
+                font-size: 25px;
+                color: $secondary-color;
+                
+                &:hover {
+                    @include hover;
+                }
+            }
+          
+        }
     }
 }
+
 .left, .right {
     height: 100%;
     padding: 50px;
