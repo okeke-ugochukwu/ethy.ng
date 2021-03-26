@@ -50,8 +50,8 @@ section {
 }
 
 .left {
-  width: 33%;
-  padding: 60px;
+  width: 30%;
+  padding: 50px;
   background: #f56d69;
 }
 
@@ -59,8 +59,70 @@ section {
   color: white;
 }
 
+.left h1 {
+  margin-bottom: 50px;
+}
+
+.slideshow {
+  width: 420px;
+  height: 520px;
+  position: relative;
+  margin-left: 10%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slideshow_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  animation: slide 7s linear both;
+  -webkit-animation: slide 7s linear both;
+}
+
+.slideshow_slider div {
+  width: 100%;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow_breadcrumbs {
+  position: absolute;
+  bottom: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sb {
+  width: 25px;
+  height: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.sb:first-child {
+  margin-left: 25px;
+}
+
+.on_display {
+  background: #412718;
+}
+
+.standby {
+  background: #ffffffb5;
+}
+
 .right {
-  width: 67%;
+  width: 70%;
   padding: 25px;
 }
 
