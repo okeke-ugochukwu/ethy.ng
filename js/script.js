@@ -8,7 +8,7 @@ $(".open-btn").click(function() {
 $("#sb1").click(function() {
     $(".sb").css("background", "#ffffffb5");
     $(this).css("background", "#412718");
-    $(".slideshow_slider").css("margin-left", "0");
+    $(".slideshow_slider").css("margin-left", "0%");
 
 })
 $("#sb2").click(function() {
