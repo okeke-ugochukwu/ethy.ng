@@ -4,7 +4,7 @@ $(".open-btn").click(function() {
 })
 
 
-//automatic sliding
+//automatic sliding for main sideshow
 //I did not plan/reserch this properly berfore coding, code should have been alot shorter 
 function moveSlider() {
    var sliderMargin = document.getElementById("slideshow_slider").style.marginLeft;
@@ -42,10 +42,45 @@ function moveSlider() {
     // console.log(breadcrumbs.length);
    
 }
+function moveSlider2() {
+   var sliderMargin2 = document.getElementById("slideshow2_slider").style.marginLeft;
+   var slidershow_text_heading = document.getElementById("slideshow2_text_heading").innerHTML;
 
+   switch (sliderMargin2) {
+       case "0%":
+            $(".slideshow2_slider").css("margin-left", "-100%");
+            $("#slideshow2_text_heading").html(miniSlideShowHeadings[1]);
+            break;
+   
+        case "-100%":
+            $(".slideshow2_slider").css("margin-left", "-200%");
+            $("#slideshow2_text_heading").html(miniSlideShowHeadings[2]);
+            break;
+        case "-200%":
+            $(".slideshow2_slider").css("margin-left", "-300%");
+            $("#slideshow2_text_heading").html(miniSlideShowHeadings[3]);
+            break;
+        case "-300%":
+            $(".slideshow2_slider").css("margin-left", "-400%");
+            $("#slideshow2_text_heading").html(miniSlideShowHeadings[4]);
+            break;
+        case "-400%":
+            $(".slideshow2_slider").css("margin-left", "0%");
+            $("#slideshow2_text_heading").html(miniSlideShowHeadings[0]);
+            break;
+    }
+}
+
+//automatic sliding for main slideshow
 setInterval(() => {
     moveSlider();
 }, 7000);
+
+//automatic slideing for mini slideshow
+setInterval(() => {
+    moveSlider2();
+}, 5000);
+
 
 //change slide
 function hightLightFirstBreadcrumb() {
@@ -68,3 +103,7 @@ function hightLightFourthBreadcrumb() {
     $("#sb4").css("background", "#412718");
     $(".slideshow_slider").css("margin-left", "-300%");
 }
+
+var miniSlideShowHeadings = [
+    "Ethy MangoPapaya Set", "Ethy Coffee Set", "Ethy Lipcare Set", "Ethy Healing Blue Cream", "Ethy Lip Glosses"
+];
