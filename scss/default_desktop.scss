@@ -1,11 +1,6 @@
-$primary-color: #e2544f;
-$primary-color-2: #f56d69;
-$primary-color-3: #ba3530;
-$primary-color-orange: #E25714;
-$primary-color-coffee: #412718;
-$secondary-color: #7e7c7c;
+@import './resets';
+@import './variables';  
 
-$regular: 12px;
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -19,27 +14,15 @@ $regular: 12px;
     -ms-transform: .1s;
     -o-transform: .1s;
 }
-* {
-    box-sizing: border-box; 
-    padding: 0;
-    margin: 0;
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    font-family: 'Montserrat', sans-serif;
-    //outline: 1px solid blue;
+
+//main breakpoints
+@mixin desktop {
+    @media only screen and (min-width: 1300px) {
+        @content;
+    }
 }
-*:focus {
-    outline: none;
-}
-html {
-    scroll-behavior: smooth;
-}
-a {
-    text-decoration: none;
-}
+
+ //css for default desktop page
 h1 {
     font-weight: 700;
     font-style: italic;
@@ -60,6 +43,7 @@ main {
 }
 .default {
     height: 100%;
+    display: none;
     //overflow: hidden;     
     &_flexbox {
         display: flex;  
@@ -343,7 +327,7 @@ main {
                     margin-left: 0%;
                 }
                 img {
-                    width: 50%;
+                    width: 20%;
                 }
             }
 
@@ -384,8 +368,6 @@ main {
     }
 
 }
-
-
 .hamburger {
     width: max-content;
     svg {
@@ -415,4 +397,13 @@ main {
         stroke-dashoffset: -60;
       }
             
+}
+//end of css for default desktop page
+
+
+//queries selector
+@include desktop {
+    .default  {
+        display: block;
+     }
 }

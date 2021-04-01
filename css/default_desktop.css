@@ -47,6 +47,7 @@ main {
 
 .default {
   height: 100%;
+  display: none;
 }
 
 .default_flexbox {
@@ -372,7 +373,7 @@ main {
 }
 
 .right .intro_box .slideshow2 div:first-child img {
-  width: 50%;
+  width: 20%;
 }
 
 .right .intro_box .slideshow2 div:nth-child(2) {
@@ -447,4 +448,10 @@ main {
 .hamburger svg.active #bottom {
   stroke-dasharray: 75.39;
   stroke-dashoffset: -60;
+}
+
+@media only screen and (min-width: 1300px) {
+  .default {
+    display: block;
+  }
 }

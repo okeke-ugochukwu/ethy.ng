@@ -1,0 +1,37 @@
+@import './resets';
+@import './variables';
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin hover {
+    color: $primary-color-2;
+    transform: .1s;
+    -webkit-transform: .1s;
+    -moz-transform: .1s;
+    -ms-transform: .1s;
+    -o-transform: .1s;
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1300px) {
+        @content;
+    }
+}
+
+@include desktop {
+    .main_all {
+        display: block;
+    }
+}
+
+.main_all {
+    display: none;
+    height: 100%;
+    background: teal;
+    color: white;
+}
+
+

@@ -107,3 +107,7 @@ function hightLightFourthBreadcrumb() {
 var miniSlideShowHeadings = [
     "Ethy MangoPapaya Set", "Ethy Coffee Set", "Ethy Lipcare Set", "Ethy Healing Blue Cream", "Ethy Lip Glosses"
 ];
+
+var miniSlideShowText = [
+    "Ethy MangoPapaya Set", "Ethy Coffee Set", "Ethy Lipcare Set", "Ethy Healing Blue Cream", "Ethy Lip Glosses"
+];
