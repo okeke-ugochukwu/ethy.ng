@@ -14,21 +14,9 @@
     -ms-transform: .1s;
     -o-transform: .1s;
 }
-
-@mixin desktop {
-    @media only screen and (min-width: 1300px) {
-        @content;
-    }
-}
-
-@include desktop {
-    .main_all {
-        display: block;
-    }
-}
+  
 
 .main_all {
-    display: none;
     height: 100%;
     background: teal;
     color: white;
