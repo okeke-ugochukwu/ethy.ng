@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  width: 100%;
+}
+
 h1 {
   font-weight: 700;
   font-style: italic;
@@ -137,7 +141,7 @@ main {
   background: #ffffffb5;
 }
 
-.temp {
+.slideshow-fx {
   width: 420px;
   height: 520px;
   background: #e2544f39;

@@ -15,11 +15,56 @@
     -o-transform: .1s;
 }
   
-
-.main_all {
-    height: 100%;
-    background: teal;
-    color: white;
+* {
+    outline: 1px solid grey;
 }
+.main_all {
+    position: relative;
+    background: rebeccapurple;
+    height: 100%; //remove this later
 
+    nav, 
+    .home {
+        height: 100%;
+        position: relative;
+    }
+    
+    .home {
+        width: 100%;
+    }
+    // these styles controls .home content when nav is toggled
+    .full_view {
+        margin-left: 0;
+    }
+    .part_view {
+        margin-left: -250px;
+    }
+    
 
+    nav {
+        z-index: 1;
+        width: 250px;
+        position: fixed;
+    }
+    // these styles help toggle nav open or closed
+    .closed {
+        right: -250px;
+    }
+    .open {
+        right: 0;
+    }
+    
+}
+#main_all-open-btn {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    position: absolute;
+    right: 6%;
+    top: 20px;
+}
+.temp {
+    padding-top: 50px;
+}

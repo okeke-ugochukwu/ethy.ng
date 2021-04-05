@@ -23,8 +23,59 @@ a {
   text-decoration: none;
 }
 
+* {
+  outline: 1px solid grey;
+}
+
 .main_all {
+  position: relative;
+  background: rebeccapurple;
   height: 100%;
-  background: teal;
-  color: white;
+}
+
+.main_all nav,
+.main_all .home {
+  height: 100%;
+  position: relative;
+}
+
+.main_all .home {
+  width: 100%;
+}
+
+.main_all .full_view {
+  margin-left: 0;
+}
+
+.main_all .part_view {
+  margin-left: -250px;
+}
+
+.main_all nav {
+  z-index: 1;
+  width: 250px;
+  position: fixed;
+}
+
+.main_all .closed {
+  right: -250px;
+}
+
+.main_all .open {
+  right: 0;
+}
+
+#main_all-open-btn {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  position: absolute;
+  right: 6%;
+  top: 20px;
+}
+
+.temp {
+  padding-top: 50px;
 }

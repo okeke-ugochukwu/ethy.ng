@@ -21,7 +21,9 @@
         @content;
     }
 }
-
+main {
+    width: 100%;
+}
  //css for default desktop page
 h1 {
     font-weight: 700;
@@ -123,7 +125,7 @@ main {
 .standby {
     background: #ffffffb5;
 }
-.temp {
+{
     width: 420px;
     height: 520px;
     background: #e2544f39;
