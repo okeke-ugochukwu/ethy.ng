@@ -66,6 +66,7 @@ body {
 .main_all__nav {
   display: -ms-grid;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
   justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -97,7 +98,7 @@ body {
 
 .main_all__nav a {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   color: #7e7c7c;
   font-weight: 500;
 }
@@ -107,7 +108,7 @@ body {
 }
 
 .main_all__nav div:nth-child(2) a {
-  font-size: 20px;
+  font-size: 30px;
   color: #f56d69;
 }
 

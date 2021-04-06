@@ -58,6 +58,7 @@ body {
 }
 .main_all__nav  {
     display: grid;
+    font-family: 'Montserrat', sans-serif;
     justify-items: center;
     align-content: center;
     background: white;
@@ -97,7 +98,7 @@ body {
     div:nth-child(2) {
         margin-top: 20px;
         a {
-            font-size: 20px;
+            font-size: 30px;
             color: $primary-color-2;
         }
     }
