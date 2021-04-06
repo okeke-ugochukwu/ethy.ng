@@ -78,7 +78,7 @@ body {
 }
 
 .main_all__nav div:first-child a {
-  padding: 10px 0px 10px;
+  padding: 12px 0px 12px;
 }
 
 .main_all__nav div:first-child a:hover {
@@ -98,7 +98,7 @@ body {
 
 .main_all__nav a {
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   color: #7e7c7c;
   font-weight: 500;
 }
@@ -229,4 +229,8 @@ h2 {
 .padding-box-first p {
   color: #7e7c7c;
   margin-bottom: 20px;
+}
+
+.padding-box-first p, .padding-box-first a {
+  font-size: 18px;
 }
