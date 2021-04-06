@@ -20,8 +20,6 @@
 }
 .main_all {
     position: relative;
-    background: rebeccapurple;
-    height: 100%; //remove this later
 
     nav, 
     .home {
@@ -112,6 +110,12 @@
     right: 30px;
     top: 30px;
 
+    g {
+        #top, #middle-stroke, #bottom {
+            stroke: $secondary-color;
+        }
+    }
+
     :hover {
         g {
             #top, #middle-stroke, #bottom {
@@ -120,6 +124,90 @@
         }
     }
 }
-.temp {
-    padding-top: 50px;
+h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.padding-box {
+  text-align: center; //make choice to remove or keep. Either way it's fine
+  padding: 20px;
+
+  p {
+      margin-bottom: 20px;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 45px;
+    z-index: 1;
+    color: white;
+    
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        
+    }
+    &:after {
+        background: $primary-color-coffee;
+        z-index: -1;
+        width: 0;
+        margin-left: -20px;
+        transition: all .9s;
+        -webkit-transition: all .9s;
+        -moz-transition: all .9s;
+        -ms-transition: all .9s;
+        -o-transition: all .9s;
+    }
+    &:before {
+        background: white;
+        z-index: -1;
+        transition: all .3s;
+        -webkit-transition: all .6s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+    }
+    &:hover {
+        color: white;
+        &:before {
+            width: 100%;
+        }
+        &:after {
+            width: 110%;
+        }
+    }
+}
+}
+.padding-box-first {
+    background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.896)), url(../img/mobile_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+    margin-top: 0;
+
+    h2 {
+        color: $secondary-color;
+        font-size: 35px;
+    }
+
+    p {
+        color: $secondary-color;
+        margin-bottom: 20px;
+    }
+    
+    
+}
+.padding-box-third {
 }
