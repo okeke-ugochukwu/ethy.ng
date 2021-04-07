@@ -6,6 +6,11 @@
     justify-content: center;
     align-items: center;
 }
+@mixin flexStart {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
 @mixin hover {
     color: $primary-color-2;
     transform: .1s;
@@ -16,7 +21,7 @@
 }
   
 * {
-    // outline: 1px solid grey;
+    //outline: 1px solid grey;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -129,16 +134,20 @@ body {
     }
 }
 h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 30px;
 }
+
 .padding-box {
-  text-align: center; //make choice to remove or keep. Either way it's fine
-  padding: 20px;
+    padding: 20px;
+    @include flexStart();
+    flex-direction: column;
 
   p {
       margin-bottom: 20px;
-  }
+      line-height: 25px;
+      color: $secondary-color;
+    }
 
   a {
     display: inline-block;
@@ -187,34 +196,45 @@ h2 {
             width: 110%;
         }
     }
+
+    
+  }
+
+//   p,a {
+//     font-size: $regular2;
+//   }
+
+    h2, p, a{
+        max-width: 700px;
+    }
 }
+.home .padding-box:not(.padding-box-first) {
+    height: 90vh;
+   
+    h2 {
+        color: $primary-color;
+        line-height: 35px;
+    }
+    h2, p  {
+        margin-bottom: 30px;
+    }
+    
 }
 .padding-box-first {
     background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.896)), url(../img/mobile_1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: auto;
     margin-top: 0;
 
     h2 {
         color: $secondary-color-2;
+        line-height: 40px;
         font-size: 280%;
     }
 
-    p {
-        color: $secondary-color;
-        margin-bottom: 20px;
-    }
 
-    p, a {
-        font-size: $regular2;
-    }
-    
     
 }
 .padding-box-third {
