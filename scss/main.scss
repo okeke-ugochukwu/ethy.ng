@@ -139,8 +139,9 @@ h2 {
 }
 
 .padding-box {
+    text-align: center;
     padding: 20px;
-    @include flexStart();
+    @include flexCenter();
     flex-direction: column;
 
   p {
@@ -207,9 +208,28 @@ h2 {
     h2, p, a{
         max-width: 700px;
     }
+
+
+    &-first {
+        background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.896)), url(../img/mobile_1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: auto;
+        margin-top: 0;
+    
+        h2 {
+            color: $secondary-color-2;
+            font-size: 280%;
+        }
+    
+        
+    }
 }
 .home .padding-box:not(.padding-box-first) {
+    text-align: left;
     height: 90vh;
+    @include flexStart();
    
     h2 {
         color: $primary-color;
@@ -219,23 +239,4 @@ h2 {
         margin-bottom: 30px;
     }
     
-}
-.padding-box-first {
-    background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.896)), url(../img/mobile_1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    margin: auto;
-    margin-top: 0;
-
-    h2 {
-        color: $secondary-color-2;
-        line-height: 40px;
-        font-size: 280%;
-    }
-
-
-    
-}
-.padding-box-third {
 }
