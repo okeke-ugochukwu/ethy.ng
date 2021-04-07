@@ -139,9 +139,9 @@ h2 {
 }
 
 .padding-box {
-    text-align: center;
+    text-align: left;
     padding: 20px;
-    @include flexCenter();
+    @include flexStart();
     flex-direction: column;
     font-size: $regular2;
 
@@ -221,6 +221,7 @@ h2 {
         h2 {
             color: $secondary-color-2;
             font-size: 280%;
+            text-transform: uppercase;
         }
     
         
