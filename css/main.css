@@ -219,8 +219,8 @@ h2 {
 }
 
 .padding-box-first {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.569)), to(rgba(0, 0, 0, 0.896))), url(../img/mobile_1.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.896)), url(../img/mobile_1.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.569)), to(rgba(0, 0, 0, 0.93))), url(../img/mobile_1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.93)), url(../img/mobile_1.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
