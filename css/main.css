@@ -236,7 +236,7 @@ h2 {
 
 .home .padding-box:not(.padding-box-first) {
   text-align: left;
-  height: 90vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
