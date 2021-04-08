@@ -234,6 +234,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.padding-box-first p {
+  width: 90%;
+}
+
 .home .padding-box:not(.padding-box-first) {
   text-align: left;
   height: 70vh;
