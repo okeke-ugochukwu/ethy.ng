@@ -19,9 +19,15 @@
     -ms-transform: .1s;
     -o-transform: .1s;
 }
+
+@mixin tablet_SmallDesktops {
+    @media only screen and(min-width: 920px) {
+        @content;
+    }
+}
   
 * {
-    //outline: 1px solid grey;
+    // outline: 1px solid grey;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -140,7 +146,8 @@ h2 {
 
 .padding-box {
     text-align: left;
-    padding: 20px;
+    padding: 4%;
+    height: max-content;
     @include flexStart();
     flex-direction: column;
     font-size: $regular2;
@@ -148,7 +155,6 @@ h2 {
     p {
         margin-bottom: 20px;
         line-height: 25px;
-        color: $secondary-color;
     }
 
     a {
@@ -215,24 +221,42 @@ h2 {
         margin-top: 0;
     
         h2 {
-            color: $secondary-color-2;
             font-size: 280%;
             text-transform: uppercase;
+            max-width: 800px;
         }
     
         p   {
             width: 90%;
+            max-width: 500px;
         }
         
     }
+    &_flexContainer {
+        height: 100%;
+        width: 100%;
+        @include flexStart();
+        flex-direction: column;
+    }
+    &_img {
+        border: 2px solid saddlebrown;
+        width: 100%;
+        max-width: 430px;
+        background: $primary-color-3;
+    }
+
+    &_text {
+        width: 100%;
+        max-width: 430px;
+    }
+    
 }
 .home .padding-box:not(.padding-box-first) {
     text-align: left;
-    height: 70vh;
-    @include flexStart();
+    height: max-content;
+    display: block;
    
     h2 {
-        color: $primary-color;
         line-height: 35px;
     }
     h2, p  {
@@ -240,10 +264,66 @@ h2 {
     }
     
 }
+.non-filled:not(.padding-box-first) {
+    h2 {
+        color: $primary-color;
+    }
+    p {
+        color: $secondary-color;
+    }
+}
+.non-filled {
+    h2 {
+        color: $secondary-color-2;
+    }
+    p {
+        color: $secondary-color;
+    }
+}
+.filled {
+    background: $primary-color;
+    color: white;
+    h2 {
+        color: white;
+    }
+    p {
+        color: rgb(226, 225, 225);
+    }
+}
 footer {
     @include flexCenter();
     height: 150px;
     background: $primary-color-2;
     color: white;
     text-align: center;
+}
+
+@include tablet_SmallDesktops {
+    .padding-box {
+        h2 {
+            font-size: 200%;
+        }
+        &-first {
+            background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.93)), url(../img/bg_tablet.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left   ;
+
+            h2 {
+                font-size: 350%;
+            }
+           
+        } 
+        &_flexContainer {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+       
+    }
+    .padding-box:not(.padding-box-first) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
 }

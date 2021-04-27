@@ -17,17 +17,23 @@
 
 //main breakpoints
 @mixin desktop {
-    @media only screen and (min-width: 1300px) {
+    @media only screen and (min-width: 1445px) {
         @content;
     }
+}
+*{
+    // outline: 2px solid grey; 
+}
+body {
+   
 }
 main {
     width: 100%;
 }
  //css for default desktop page
 h1 {
-    font-weight: 700;
-    font-style: italic;
+    font-weight: 800;
+    // font-style: italic;
     margin: 0;
 }
 main {
@@ -68,8 +74,8 @@ main {
     }
 }
 .slideshow {
-    width: 420px;
-    height: 520px;
+    width: 500px;
+    height: 620px;
     position: relative;
     //border: 2px solid #412718;
     margin-left: 10%;
@@ -126,8 +132,8 @@ main {
     background: #ffffffb5;
 }
 .slideshow-fx{
-    width: 420px;
-    height: 520px;
+    width: 500px;
+    height: 620px;
     background: #e2544f39;
     position: absolute;
     border-radius: 10px;
@@ -156,7 +162,7 @@ main {
         margin-bottom: 100px;
 
         div:first-child {
-            margin-right: 20px;
+            margin-right: 10px;
             padding-top: 5px;
 
             g  {
@@ -217,7 +223,7 @@ main {
             right: 0;
 
             a {
-                font-size: 23px;
+                font-size: 27px;
                 color: $secondary-color;
                 
                 &:hover {
@@ -237,7 +243,7 @@ main {
         
         & > div {
             width: 500px;
-
+            overflow-x: visible;
         }
         h2 {
             font-size: 50px;
@@ -250,6 +256,7 @@ main {
             display: inline-block;
             position: relative;
             overflow: hidden;
+            font-size: 20px;
             padding: 10px 45px;
             z-index: 1;
             color: white;
@@ -298,7 +305,7 @@ main {
         p {
             font-family: 'Open Sans', sans-serif;
             margin: 25px 0px 30px;
-            font-size: 18px;
+            font-size: 20px;
             width: 90%;
         }
         .slideshow2 {
@@ -343,7 +350,7 @@ main {
                 }
                 p  {
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 16px;
                     margin: 0;
                 }
             }
@@ -360,7 +367,7 @@ main {
         }
 
         a {
-            font-size: 23px;
+            font-size: 27px;
             color: $secondary-color;
 
             &:hover {

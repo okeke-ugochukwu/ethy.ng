@@ -138,7 +138,10 @@ h2 {
 
 .padding-box {
   text-align: left;
-  padding: 20px;
+  padding: 4%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +161,6 @@ h2 {
 .padding-box p {
   margin-bottom: 20px;
   line-height: 25px;
-  color: #7e7c7c;
 }
 
 .padding-box a {
@@ -229,18 +231,19 @@ h2 {
 }
 
 .padding-box-first h2 {
-  color: #dedede;
   font-size: 280%;
   text-transform: uppercase;
+  max-width: 800px;
 }
 
 .padding-box-first p {
   width: 90%;
+  max-width: 500px;
 }
 
-.home .padding-box:not(.padding-box-first) {
-  text-align: left;
-  height: 70vh;
+.padding-box_flexContainer {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,15 +253,67 @@ h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.padding-box_img {
+  border: 2px solid saddlebrown;
+  width: 100%;
+  max-width: 430px;
+  background: #ba3530;
+}
+
+.padding-box_text {
+  width: 100%;
+  max-width: 430px;
+}
+
+.home .padding-box:not(.padding-box-first) {
+  text-align: left;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: block;
 }
 
 .home .padding-box:not(.padding-box-first) h2 {
-  color: #e2544f;
   line-height: 35px;
 }
 
 .home .padding-box:not(.padding-box-first) h2, .home .padding-box:not(.padding-box-first) p {
   margin-bottom: 30px;
+}
+
+.non-filled:not(.padding-box-first) h2 {
+  color: #e2544f;
+}
+
+.non-filled:not(.padding-box-first) p {
+  color: #7e7c7c;
+}
+
+.non-filled h2 {
+  color: #dedede;
+}
+
+.non-filled p {
+  color: #7e7c7c;
+}
+
+.filled {
+  background: #e2544f;
+  color: white;
+}
+
+.filled h2 {
+  color: white;
+}
+
+.filled p {
+  color: #e2e1e1;
 }
 
 footer {
@@ -275,4 +330,38 @@ footer {
   background: #f56d69;
   color: white;
   text-align: center;
+}
+
+@media only screen and (min-width: 920px) {
+  .padding-box h2 {
+    font-size: 200%;
+  }
+  .padding-box-first {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.569)), to(rgba(0, 0, 0, 0.93))), url(../img/bg_tablet.JPG);
+    background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0.93)), url(../img/bg_tablet.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .padding-box-first h2 {
+    font-size: 350%;
+  }
+  .padding-box_flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .padding-box:not(.padding-box-first) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }

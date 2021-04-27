@@ -28,8 +28,7 @@ main {
 }
 
 h1 {
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -80,8 +79,8 @@ main {
 }
 
 .slideshow {
-  width: 420px;
-  height: 520px;
+  width: 500px;
+  height: 620px;
   position: relative;
   margin-left: 10%;
   overflow: hidden;
@@ -142,8 +141,8 @@ main {
 }
 
 .slideshow-fx {
-  width: 420px;
-  height: 520px;
+  width: 500px;
+  height: 620px;
   background: #e2544f39;
   position: absolute;
   border-radius: 10px;
@@ -185,7 +184,7 @@ main {
 }
 
 .right nav div:first-child {
-  margin-right: 20px;
+  margin-right: 10px;
   padding-top: 5px;
 }
 
@@ -210,7 +209,7 @@ main {
 }
 
 .right nav ul li a {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   padding: 10px 30px 10px 0px;
   font-weight: 600;
@@ -244,7 +243,7 @@ main {
 }
 
 .right nav div:nth-child(3) a {
-  font-size: 23px;
+  font-size: 27px;
   color: #7e7c7c;
 }
 
@@ -273,6 +272,7 @@ main {
 
 .right .intro_box > div {
   width: 500px;
+  overflow-x: visible;
 }
 
 .right .intro_box h2 {
@@ -287,6 +287,7 @@ main {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  font-size: 20px;
   padding: 10px 45px;
   z-index: 1;
   color: white;
@@ -339,7 +340,7 @@ main {
 .right .intro_box p {
   font-family: 'Open Sans', sans-serif;
   margin: 25px 0px 30px;
-  font-size: 18px;
+  font-size: 20px;
   width: 90%;
 }
 
@@ -392,7 +393,7 @@ main {
 
 .right .intro_box .slideshow2 div:nth-child(2) p {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -407,7 +408,7 @@ main {
 }
 
 .right .social_side_pin a {
-  font-size: 23px;
+  font-size: 27px;
   color: #7e7c7c;
 }
 
@@ -454,7 +455,7 @@ main {
   stroke-dashoffset: -60;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1445px) {
   .default {
     display: block;
   }
