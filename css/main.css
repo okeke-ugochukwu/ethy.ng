@@ -169,7 +169,6 @@ h2 {
   overflow: hidden;
   padding: 15px 45px;
   z-index: 1;
-  color: white;
 }
 
 .padding-box a:after, .padding-box a:before {
@@ -214,6 +213,10 @@ h2 {
 
 .padding-box a:hover:after {
   width: 110%;
+}
+
+.padding-box h2 {
+  width: 90%;
 }
 
 .padding-box h2, .padding-box p, .padding-box a {
@@ -262,6 +265,7 @@ h2 {
 .padding-box_img {
   width: 100%;
   max-width: 500px;
+  margin-bottom: 20px;
 }
 
 .padding-box_img img {
@@ -270,7 +274,7 @@ h2 {
 
 .padding-box_text {
   width: 100%;
-  max-width: 430px;
+  max-width: 500px;
 }
 
 .home .padding-box:not(.padding-box-first) {
@@ -286,7 +290,14 @@ h2 {
 }
 
 .home .padding-box:not(.padding-box-first) h2, .home .padding-box:not(.padding-box-first) p {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+.padding-box-third .padding-box_flexContainer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .non-filled:not(.padding-box-first) h2 {
@@ -318,6 +329,54 @@ h2 {
   color: #e2e1e1;
 }
 
+.padding-box-fourth h2 {
+  margin-bottom: 5px;
+}
+
+.padding-box-fourth h2, .padding-box-fourth p {
+  text-align: center;
+  margin: auto;
+}
+
+.padding-box-fourth .padding-box_flexContainer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 1000px;
+}
+
+.padding-box-fourth .padding-box_flexContainer:nth-child(3) {
+  margin-top: 30px;
+}
+
+.padding-box-fourth .padding-box_flexContainer .padding-box_img {
+  width: 30%;
+  max-width: 200px;
+  margin-bottom: 0;
+}
+
+.padding-box-fourth .padding-box_flexContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.padding-box-fourth .padding-box_flexContainer .padding-box_text {
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+.padding-box-fourth .padding-box_flexContainer a {
+  font-weight: 500;
+}
+
+.padding-box-fifth .padding-box_flexContainer .padding-box_img h2 {
+  width: 100%;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,7 +393,16 @@ footer {
   text-align: center;
 }
 
+@media only screen and (min-width: 664px) {
+  .padding-box-fourth .padding-box_flexContainer .padding-box_text {
+    font-size: 18px;
+  }
+}
+
 @media only screen and (min-width: 920px) {
+  .padding-box {
+    padding: 6%;
+  }
   .padding-box h2 {
     font-size: 200%;
   }
@@ -356,6 +424,16 @@ footer {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    gap: 30px;
+  }
+  .padding-box-first p {
+    line-height: 1.5em;
+  }
+  .padding-box-third .padding-box_flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .padding-box:not(.padding-box-first) {
     -webkit-box-orient: horizontal;
@@ -365,5 +443,14 @@ footer {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .home .padding-box:not(.padding-box-first) p {
+    margin-bottom: 30px;
+  }
+  .padding-box-fourth .padding-box_flexContainer .padding-box_text {
+    font-size: 18px;
+  }
+  .padding-box-fourth .padding-box_flexContainer .inverted-btn {
+    padding: 15px 90px;
   }
 }

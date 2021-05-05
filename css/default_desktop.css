@@ -48,6 +48,13 @@ main {
   padding: 10px 20px;
 }
 
+.inverted-btn {
+  color: #e2544f;
+  background: white;
+  border: 0px;
+  padding: 10px 20px;
+}
+
 .default {
   height: 100%;
   display: none;

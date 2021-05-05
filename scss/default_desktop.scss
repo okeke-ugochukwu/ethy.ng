@@ -49,6 +49,12 @@ main {
     background: $primary-color;
     padding: 10px 20px;
 }
+.inverted-btn {
+    color: $primary-color;
+    background: white;
+    border: 0px;
+    padding: 10px 20px;
+}
 .default {
     height: 100%;
     display: none;

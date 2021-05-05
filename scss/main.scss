@@ -20,11 +20,7 @@
     -o-transform: .1s;
 }
 
-@mixin tablet_SmallDesktops {
-    @media only screen and(min-width: 920px) {
-        @content;
-    }
-}
+
   
 * {
     // outline: 1px solid grey;
@@ -163,7 +159,6 @@ h2 {
         overflow: hidden;
         padding: 15px 45px;
         z-index: 1;
-        color: white;
         
         &:after,
         &:before {
@@ -207,7 +202,9 @@ h2 {
 
         
     }
-
+    h2 {
+        width: 90%;
+    }
     h2, p, a{
         max-width: 700px;
     }
@@ -242,6 +239,7 @@ h2 {
         // border: 2px solid saddlebrown;
         width: 100%;
         max-width: 500px;
+        margin-bottom: 20px;
 
         img {
             width: 100%;
@@ -250,7 +248,7 @@ h2 {
 
     &_text {
         width: 100%;
-        max-width: 430px;
+        max-width: 500px;
     }
     
 }
@@ -263,9 +261,14 @@ h2 {
         line-height: 35px;
     }
     h2, p  {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     
+}
+.padding-box-third {
+    .padding-box_flexContainer {
+        flex-direction: column-reverse;
+    }
 }
 .non-filled:not(.padding-box-first) {
     h2 {
@@ -293,6 +296,57 @@ h2 {
         color: rgb(226, 225, 225);
     }
 }
+.padding-box-fourth {
+    h2 {
+        margin-bottom: 5px;
+    }
+     h2, p {
+        text-align: center;
+        margin: auto;
+    }
+    
+    .padding-box_flexContainer {
+        flex-direction: row;
+        gap: 15px;
+        margin: auto;
+        margin-bottom: 20px;
+        max-width: 1000px;
+
+       
+
+        &:nth-child(3) {
+            margin-top: 30px;
+        }
+       
+        .padding-box_img {
+            width: 30%;
+            max-width: 200px;
+            margin-bottom: 0;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .padding-box_text {
+            line-height: 1.5em;
+            font-size: $regular;
+        }
+
+        a {
+            font-weight: 500;
+        }
+    }
+
+}
+.padding-box-fifth {
+    .padding-box_flexContainer {
+        .padding-box_img {
+            h2 {
+                width: 100%;
+            }
+        }
+    }
+}
 footer {
     @include flexCenter();
     height: 150px;
@@ -301,8 +355,27 @@ footer {
     text-align: center;
 }
 
+@mixin tablet_SmallDesktops {
+    @media only screen and(min-width: 920px) {
+        @content;
+    }
+}
+
+// This media query is a fix
+@media only screen and (min-width: 664px) {
+    .padding-box-fourth {
+        .padding-box_flexContainer {
+             .padding-box_text {
+                 font-size: $regular2;
+             }
+        }
+     }
+}
+
 @include tablet_SmallDesktops {
     .padding-box {
+        padding: 6%;
+
         h2 {
             font-size: 200%;
         }
@@ -320,13 +393,41 @@ footer {
         &_flexContainer {
             flex-direction: row;
             justify-content: space-evenly;
+            gap: 30px;
         }
-
        
+    }
+    .padding-box-first {
+        p {
+            line-height: 1.5em;
+        }
+    }
+    .padding-box-third {
+        .padding-box_flexContainer {
+            flex-direction: row;
+        }
     }
     .padding-box:not(.padding-box-first) {
         flex-direction: row;
         justify-content: space-evenly;
+
+       
     }
+    .home .padding-box:not(.padding-box-first) {
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    .padding-box-fourth {
+       .padding-box_flexContainer {
+            .padding-box_text {
+                font-size: $regular2;
+            }
+            .inverted-btn {
+                padding: 15px 90px;
+            }
+       }
+    }
+    
     
 }
