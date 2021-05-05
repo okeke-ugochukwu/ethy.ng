@@ -265,11 +265,15 @@ h2 {
     }
     
 }
+
+// What makes us stand out 
 .padding-box-third {
     .padding-box_flexContainer {
         flex-direction: column-reverse;
     }
 }
+
+
 .non-filled:not(.padding-box-first) {
     h2 {
         color: $primary-color;
@@ -296,6 +300,8 @@ h2 {
         color: rgb(226, 225, 225);
     }
 }
+
+// Ethy Products
 .padding-box-fourth {
     h2 {
         margin-bottom: 5px;
@@ -338,6 +344,8 @@ h2 {
     }
 
 }
+
+// We also have a youtube
 .padding-box-fifth {
     .padding-box_flexContainer {
         .padding-box_img {
