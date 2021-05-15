@@ -23,7 +23,7 @@
 
   
 * {
-    // outline: 1px solid grey;
+    // outline: 1px solid grey;    
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -266,6 +266,20 @@ h2 {
     
 }
 
+//Special Classes
+.fancy-Shadow {
+
+        
+   &::before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // z-index: -1;
+        box-shadow: 10px 10px 10px black;
+   }
+}
+
 // What makes us stand out 
 .padding-box-third {
     .padding-box_flexContainer {
@@ -402,6 +416,9 @@ footer {
             flex-direction: row;
             justify-content: space-evenly;
             gap: 30px;
+        }
+        &_img {
+            margin-bottom: initial;
         }
        
     }
