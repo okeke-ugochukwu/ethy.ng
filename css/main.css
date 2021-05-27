@@ -32,12 +32,12 @@ body {
 }
 
 .main_all nav,
-.main_all .home {
+.main_all .page {
   height: 100%;
   position: relative;
 }
 
-.main_all .home {
+.main_all .page {
   width: 100%;
 }
 
@@ -401,6 +401,7 @@ h2 {
 
 .padding-box-fifth .padding-box_flexContainer .padding-box_img h2 {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 footer {

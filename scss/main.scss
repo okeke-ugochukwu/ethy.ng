@@ -21,7 +21,7 @@
 }
 
 
-  
+// H O M E P A G E
 * {
     // outline: 1px solid grey;    
 }
@@ -32,12 +32,12 @@ body {
     position: relative;
 
     nav, 
-    .home {
+    .page {
         height: 100%;
         position: relative;
     }
     
-    .home {
+    .page {
         width: 100%;
     }
     // these styles controls .home content when nav is toggled
@@ -380,6 +380,7 @@ h2 {
         .padding-box_img {
             h2 {
                 width: 100%;
+                margin-bottom: 30px;
             }
         }
     }
@@ -471,3 +472,5 @@ footer {
     
     
 }
+
+

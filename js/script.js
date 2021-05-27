@@ -5,7 +5,7 @@ $("#default_flexbox-open-btn").click(function() {
 
 $("#main_all-open-btn").click(function() {
     $(".main_all__nav").toggleClass("open");
-    $(".home").toggleClass("part_view");
+    $(".page").toggleClass("part_view");
 })
 
 
