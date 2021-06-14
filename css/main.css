@@ -477,6 +477,9 @@ footer {
   .home .padding-box:not(.padding-box-first) p {
     margin-bottom: 30px;
   }
+  .padding-box-fourth {
+    display: block;
+  }
   .padding-box-fourth .padding-box_flexContainer .padding-box_text {
     font-size: 18px;
   }

@@ -23,7 +23,7 @@
 
 // H O M E P A G E
 * {
-    // outline: 1px solid grey;    
+    // outline: 1px solid grey;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -31,12 +31,12 @@ body {
 .main_all {
     position: relative;
 
-    nav, 
+    nav,
     .page {
         height: 100%;
         position: relative;
     }
-    
+
     .page {
         width: 100%;
     }
@@ -47,7 +47,7 @@ body {
     .part_view {
         margin-left: -250px;
     }
-    
+
 
     nav {
         z-index: 1;
@@ -61,7 +61,7 @@ body {
     .open {
         right: 0;
     }
-    
+
 }
 .main_all__nav  {
     display: grid;
@@ -71,15 +71,15 @@ body {
     background: white;
 
     div {
-        width: 70%; 
+        width: 70%;
     }
 
     div:first-child {
-    
+
         a {
-            
+
             padding: 12px 0px 12px;
-    
+
             &:hover {
                 @include hover;
                 transform: scale(1.07);
@@ -88,7 +88,7 @@ body {
                 -ms-transform: scale(1.07);
                 -o-transform: scale(1.07);
             }
-    
+
             &.active {
                 color: $primary-color-2;
             }
@@ -99,7 +99,7 @@ body {
         display: inline-block;
         font-size: $regular2;
         color: $secondary-color;
-        font-weight: 500; 
+        font-weight: 500;
     }
 
     div:nth-child(2) {
@@ -109,7 +109,7 @@ body {
             color: $primary-color-2;
         }
     }
-    
+
 }
 #main_all-open-btn {
     transform: rotate(180deg);
@@ -159,7 +159,7 @@ h2 {
         overflow: hidden;
         padding: 15px 45px;
         z-index: 1;
-        
+
         &:after,
         &:before {
             content: '';
@@ -168,7 +168,7 @@ h2 {
             left: 0;
             width: 0;
             height: 100%;
-            
+
         }
         &:after {
             background: $primary-color-coffee;
@@ -200,7 +200,7 @@ h2 {
             }
         }
 
-        
+
     }
     h2 {
         width: 90%;
@@ -216,18 +216,18 @@ h2 {
         height: 100vh;
         margin: auto;
         margin-top: 0;
-    
+
         h2 {
             font-size: 280%;
             text-transform: uppercase;
             max-width: 800px;
         }
-    
+
         p   {
             width: 90%;
             max-width: 500px;
         }
-        
+
     }
     &_flexContainer {
         height: 100%;
@@ -250,20 +250,20 @@ h2 {
         width: 100%;
         max-width: 500px;
     }
-    
+
 }
 .home .padding-box:not(.padding-box-first) {
     text-align: left;
     height: max-content;
     display: block;
-   
+
     h2 {
         line-height: 35px;
     }
     h2, p  {
         margin-bottom: 15px;
     }
-    
+
 }
 
 //Special Classes
@@ -295,7 +295,7 @@ h2 {
     }
 }
 
-// What makes us stand out 
+// What makes us stand out
 .padding-box-third {
     .padding-box_flexContainer {
         flex-direction: column-reverse;
@@ -339,7 +339,7 @@ h2 {
         text-align: center;
         margin: auto;
     }
-    
+
     .padding-box_flexContainer {
         flex-direction: row;
         gap: 15px;
@@ -347,12 +347,12 @@ h2 {
         margin-bottom: 20px;
         max-width: 1000px;
 
-       
+
 
         &:nth-child(3) {
             margin-top: 30px;
         }
-       
+
         .padding-box_img {
             width: 30%;
             max-width: 200px;
@@ -385,6 +385,7 @@ h2 {
         }
     }
 }
+
 footer {
     @include flexCenter();
     height: 150px;
@@ -426,8 +427,8 @@ footer {
             h2 {
                 font-size: 350%;
             }
-           
-        } 
+
+        }
         &_flexContainer {
             flex-direction: row;
             justify-content: space-evenly;
@@ -436,7 +437,7 @@ footer {
         &_img {
             margin-bottom: initial;
         }
-       
+
     }
     .padding-box-first {
         p {
@@ -452,7 +453,7 @@ footer {
         flex-direction: row;
         justify-content: space-evenly;
 
-       
+
     }
     .home .padding-box:not(.padding-box-first) {
         p {
@@ -460,6 +461,7 @@ footer {
         }
     }
     .padding-box-fourth {
+        display: block;
        .padding-box_flexContainer {
             .padding-box_text {
                 font-size: $regular2;
@@ -469,8 +471,8 @@ footer {
             }
        }
     }
-    
-    
+
+
 }
 
 

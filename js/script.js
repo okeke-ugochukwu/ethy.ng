@@ -1,9 +1,9 @@
-//show or hide menu option 
+        //show or hide menu option 
 $("#default_flexbox-open-btn").click(function() {
     $("#nav_UL").toggleClass("full");
 })
 
-$("#main_all-open-btn").click(function() {
+$("#hj-open-btn").click(function() {
     $(".main_all__nav").toggleClass("open");
     $(".page").toggleClass("part_view");
 })
